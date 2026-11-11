@@ -1,0 +1,196 @@
+css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff5f9;
+    color: #514451;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Шапка сайта */
+
+.header {
+    background: linear-gradient(135deg, #c18caf, #a99bdc);
+    color: white;
+    padding: 35px 0;
+    margin-bottom: 35px;
+    box-shadow: 0 5px 20px rgba(190, 130, 170, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-brand h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.header-brand h1 span {
+    color: #ffe5ef;
+}
+
+.header-brand p {
+    font-size: 16px;
+}
+
+/* Подпись автора */
+
+.author {
+    font-family: "Brush Script MT", cursive;
+    font-size: 38px;
+    color: #fff5fb;
+    transform: rotate(-5deg);
+    text-shadow: 0 2px 5px rgba(80, 40, 90, 0.15);
+}
+
+/* Основные блоки */
+
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(190, 130, 170, 0.10);
+    border: 1px solid #f8e5ef;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #b66e98;
+}
+
+/* Поля ввода */
+
+input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #ead5e2;
+    border-radius: 10px;
+    font-size: 15px;
+    background: #fffbfd;
+    color: #514451;
+    outline: none;
+}
+
+input:focus {
+    border-color: #c18caf;
+    box-shadow: 0 0 0 3px rgba(193, 140, 175, 0.12);
+}
+
+/* Кнопки */
+
+button {
+    background: linear-gradient(135deg, #d58caf, #a99bdc);
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(180, 120, 170, 0.25);
+}
+
+/* Форма */
+
+#propertyForm label {
+    display: inline-block;
+    margin: 10px 15px 15px 0;
+}
+
+/* Карточки квартир */
+
+.properties-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.property-card {
+    border: 1px solid #f2dce9;
+    border-radius: 16px;
+    padding: 20px;
+    background: #fffafd;
+    transition: 0.3s;
+}
+
+.property-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(190, 130, 170, 0.15);
+}
+
+.property-card h3 {
+    color: #b66e98;
+    margin-bottom: 12px;
+}
+
+.property-card p {
+    margin-bottom: 9px;
+    color: #665b66;
+}
+
+.property-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a77bbd;
+    margin: 15px 0;
+}
+
+/* Кнопка удаления */
+
+.delete-button {
+    background: #df8299;
+}
+
+.delete-button:hover {
+    background: #c95f7b;
+}
+
+/* Сообщения */
+
+#message {
+    margin-top: 12px;
+    color: #438b68;
+}
+
+/* Адаптация под телефон */
+
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header-brand h1 {
+        font-size: 28px;
+    }
+
+    .author {
+        font-size: 30px;
+    }
+
+    .container {
+        width: 92%;
+    }
+}
+

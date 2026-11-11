@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArendaKG — Аренда жилья</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-content">
+        <div class="header-brand">
+            <h1>Arenda<span>KG</span></h1>
+            <p>Найдите жильё своей мечты</p>
+        </div>
+
+        <div class="author">
+            By Suiorkulova ♡
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="search-section">
+        <h2>Поиск жилья</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Введите название квартиры..."
+        >
+
+        <button id="searchButton">Найти</button>
+    </section>
+
+    <section class="form-section">
+        <h2>Добавить объявление</h2>
+
+        <form id="propertyForm">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Название квартиры"
+                required
+            >
+
+            <input
+                type="text"
+                id="city"
+                placeholder="Город"
+                required
+            >
+
+            <input
+                type="number"
+                id="rooms"
+                placeholder="Количество комнат"
+                min="1"
+                required
+            >
+
+            <input
+                type="number"
+                id="area"
+                placeholder="Площадь (м²)"
+                min="1"
+                required
+            >
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Цена за сутки (сом)"
+                min="1"
+                required
+            >
+
+            <label>
+                <input type="checkbox" id="wifi">
+                Wi-Fi
+            </label>
+
+            <label>
+                <input type="checkbox" id="parking">
+                Парковка
+            </label>
+
+            <button type="submit">Добавить квартиру</button>
+
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <section class="properties-section">
+        <h2>Доступные квартиры</h2>
+
+        <div id="propertiesList" class="properties-list"></div>
+    </section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
+
